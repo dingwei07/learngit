@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/Hui.css"/>
+		<style type="text/css">
+			.img2{
+				height: 60px;
+                width: 50px;
+                background: url(img/sprites.png) no-repeat #fff;
+                background-position: 0px -120px;
+			}
+			input{
+				border: none;
+			}
+			input[type="button"]{
+				background-color: #fff;
+				border: none;
+				padding-left: 20px;
+				border-left: 1px black solid;
+			}
+		</style>
+	</head>
+	<style>
+		.box{
+			width: 80%;
+			height: 500px;
+			margin: 0 auto;
+			background-color:skyblue;
+		}
+	</style>
+	<body>
+		<div class="box">
+			<ul>
+				<li class="H-flexbox-horizontal ">
+					<div class="img2"></div>
+					<input class="H-flex-item" type="number" placeholder="输入验证码">
+					<input type="button" value="获取验证码">
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	background: #FFFFFF;
+}
+
+.bg_whithe {
+	width: 100%;
+	height: 200px;
+	background: url(../img/bg_color.png) no-repeat center center;
+	background-size: 76%;
+	background-color: #FFFFFF;
+}
+
+.indeAlso {
+    width: 210px;
+    text-align: center;
+    margin:0 auto;
+    position: relative;
+	top:65px;
+	background: #FFFFFF;
+	border-radius: 20px;
+	box-shadow: 0 0 15px #a1b7da;
+	padding:5px 0px;
+}
+
+
+.indeTitle {
+	color: #555555;
+	font-size: 16px;
+}
+
+.indeMoney {
+	color: #fc8d2a;
+	font-size: 16px;
+}
+
+.indeMethod {
+	background: #ffffff;
+	margin-top:15px;
+}
+
+.indeH4 {
+	color: #999999;
+	padding:10px 15px;
+	font-weight: normal;
+	font-size: 14px;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+.indeWay {
+	border-bottom: 1px solid #dcdcdc;
+	margin: 0px 10px;
+	display: flex;
+	-webkit-justify-content: space-between;
+	padding: 15px 5px;
+	font-size: 14px;
+}
+.WeChat{ width: 30px; vertical-align: middle;}
+.fg_gray{ width: 23px; vertical-align: middle;}
+.bindingBtn{text-align: center; font-size: 14px;}
+.H-button{ 
+	width: 200px; 
+    border:none; 
+    background: #5b94fb; 
+    margin-top: 20px; 
+    border-radius: 50px; 
+    height:46px;
+    }
+

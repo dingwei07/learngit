@@ -1,0 +1,32 @@
+*{ margin: 0; padding: 0;}
+body{ height: 100%; width: 100%; position: relative;
+background: url(../img/bg.png) no-repeat;
+background-size: 100%;
+}
+.BindingcaaountPage{ 
+	width: 100%;
+	padding-top: 40px;
+}
+.bg{ width: 100%; background-size: 100%;}
+.headImg{ width: 100%; text-align: center;}
+.Headportrait{ width: 100px; background: #FFFFFF; padding:5px 5px; }
+.userName{ font-size: 14px;}
+.PhonePwd{ margin:10px 20px; background: #ffffff;}
+.phone,.pwd{ width: 16px; vertical-align: middle;}
+.input_P,.input_W{ 
+	position: relative; 
+	width: 85%; 
+	border:none; 
+	padding:10px 0px;
+	color:#999999;
+	background: #FFFFFF;
+	border:none;
+	outline:none;
+}
+.border_phone{ padding:5px 15px; margin:0px 10px; border-bottom: 1px solid #dcdcdc; }
+.forgetPwd{ text-align: right; margin:0px 22px;}
+.a_pwd{ font-size: 14px; color: #FFFFFF; text-decoration: none;}
+.bindingBtn{text-align: center; font-size: 14px;}
+.bindinWord{ background: #5b94fb; border-radius: 50px;}
+.hui-button-large{ width: 55%; height:46px; color: #FFFFFF; margin:0 auto; border-radius: 50px;}
+

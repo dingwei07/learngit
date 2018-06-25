@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自主还款</title>
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<link rel="stylesheet" href="css/Hui.css" />
+		<link rel="stylesheet" href="css/independent.css"/>
+	</head>
+	<body style="background: #ededed;">
+		<div class="bg_whithe">
+			<div class="indeAlso">
+				<div class="indeTitle">还款金额</div>
+				<div class="indeMoney"><span class="indeQian">￥</span>2,604.00</div>
+		    </div>
+		</div>
+		<div class="indeMethod">
+			<h4 class="indeH4">支付方式</h4>
+			<div class="indeWay">
+			      <div>
+			      	<img class="WeChat" src="img/WeChat.png">&nbsp;&nbsp;微信支付
+			      </div>
+			      <div>
+			      	<img class="fg_gray" src="img/fg_gray.png">
+			      </div>
+			</div>
+			<div class="indeWay" >
+			      <div>
+			      	<img  class="WeChat" src="img/Paytreasure.png">&nbsp;&nbsp;支付宝支付
+			      </div>
+			      <div>
+			      	<img class="fg_gray"  src="img/fg_gray.png">
+			      </div>
+			</div>
+			<div class="indeWay">
+			      <div>
+			      	<img class="WeChat" src="img/Bankcard.png">&nbsp;&nbsp;中国银行
+			      </div>
+			      <div>
+			      	<img class="fg_gray" src="img/fg_gray.png">
+			      </div>
+			</div>
+		</div>
+		 <div class="bindingBtn">
+		 	<button class="H-button H-font-size-15 H-outline-none H-padding-vertical-both-8 H-padding-horizontal-both-20  H-theme-font-color-white  H-theme-font-color1-click H-border-radius-3">确定</button>
+    </div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+	<script type="text/javascript">
+		$('.indeWay').click(function(){
+			$('.fg_gray').attr('src','img/fg_gray.png');
+			$(this).find('div').find('.fg_gray').attr('src','img/fg_blue.png');
+		});
+	</script>
+</html>

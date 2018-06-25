@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/Hui.css" />
+		<title>提前还款</title>
+		<style type="text/css">
+			body,
+			html {
+				background-color: #ededed;
+				/*background-color: #66CCFF;*/
+			}
+			
+			header {
+				height: 500px;
+				width: auto;
+				background: linear-gradient(to bottom right, #3dcfd1, #268fd2);
+			}
+			
+			main {
+				margin: 0 50px;
+				font-size: 35px;
+				overflow: hidden;
+			}
+			
+			main div {
+				background-color: #fff;
+			}
+			
+			main div span {
+				margin-left: 20px;
+			}
+			
+			header div {
+				display: -webkit-box;
+				-webkit-box-orient: horizontal;
+				-webkit-box-pack: center;
+				-webkit-box-align: center;
+				display: box;
+				box-orient: horizontal;
+				box-pack: center;
+				box-align: center;
+				padding: 20px 0;
+			}
+			
+			#ahead {
+				width: 80%;
+				padding: 40px 0px;
+				border-radius: 60px;
+				color: #fc8d2a;
+				background-color: #fff;
+				border: none;
+				box-shadow: 0 0 20px rgba(41, 44, 167, 0.22);
+				position: relative;
+				top: -66px
+			}
+			
+			.sum {
+				color: #fff;
+				font-size: 60px;
+			}
+			
+			header div span {
+				margin-right: 20px;
+				color: #cbecff;
+			}
+			
+			.bankCode {
+				font-style: normal;
+			}
+			
+			.overdue {
+				background-color: #FC8D2A;
+				color: #fff;
+				border-radius: 25px;
+				padding: 0 20px;
+			}
+			
+			.right {
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-direction: row-reverse;
+				flex-direction: row-reverse;
+				vertical-align: middle;
+			}
+			
+			.result {
+				width: 200px;
+				height: 100px;
+				display: block;
+				position: relative;
+				top: 18%;
+				border-radius: 20px;
+				border: none;
+				background-color: #fff;
+			}
+			
+			.result_ok {
+				border: 1px solid #999;
+				color: #999;
+			}
+			
+			.result_no {
+				border: 1px solid #ff485c;
+				color: #ff485c;
+			}
+			
+			.money {
+				font-size: 60px;
+				color: #fc8d2a;
+			}
+			
+			.dataAmount {
+				position: relative;
+				padding: 2% 5% 2% 5%;
+				border-bottom: 3px dashed #ccc;
+				/*border: 1px solid red;*/
+				border-radius: 20px 20px 0px 0px;
+			}
+			
+			.H-555 {
+				color: #555;
+			}
+			
+			.detail {
+				/*height: 500px;*/
+				padding: 2% 5% 2% 5%;
+				border-radius: 0px 0px 20px 20px;
+				margin-bottom: 20px;
+				
+			}
+			
+			.threeL {
+				height: 0;
+				width: 0;
+				border-top: 50px solid transparent;
+				/*border-right:50px solid palegreen;*/
+				border-bottom: 50px solid transparent;
+				border-left: 70px solid #ededed;
+				position: absolute;
+				top: 71.5%;
+				left: -5%;
+			}
+			
+			.threeR {
+				height: 0;
+				width: 0;
+				border-top: 50px solid transparent;
+				border-right: 70px solid #EDEDED;
+				border-bottom: 50px solid transparent;
+				/*border-left: 70px solid #ededed;*/
+				position: absolute;
+				top: 71.5%;
+				right: -5%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<div style="color: #cbecff;padding-top: 63px;">应还金额（元）</div>
+			<div class="sum">88888.88</div>
+			<!--还款金额-->
+			<div><span>扣款账户</span><span class="bankType">农业银行储蓄卡（<i class="bankCode">2330</i>）</span></div>
+		</header>
+		<div class="H-text-align-center btn">
+			<button id="ahead">提前还款</button>
+		</div>
+		<main>
+			<div class="H-flexbox-horizontal dataAmount ">
+				<div class="threeL"></div>
+				<!--三角形-->
+				<div class="threeR"></div>
+				<!--三角形-->
+				<div class="left">
+					<span class="H-555">第<i class="data">一</i>期</span>
+					<span class="times H-555">2018-08-08</span>
+					<span class="H-display-inline-block overdue">已逾期</span>
+					<br /><span class="money">2604.00</span>
+				</div>
+				<div class="right H-flex-item ">
+					<button class="result result_ok ">已还清</button>
+				</div>
+			</div>
+			<div class="detail H-flexbox-vertical H-padding-vertical-top-10">
+				<span class="H-555">本金：</span>
+				<span class="H-555">利息：</span>
+				<span class="H-555">计费时间：</span>
+			</div>
+			
+		</main>
+	</body>
+	<script src="javascript/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var str = '';
+		//		str="<div>就这样吧</div>";
+		//		str+="<div>我站在鼓楼上面</div>";
+		str = "";
+
+		//		$("body").html(str);
+	</script>
+
+</html>

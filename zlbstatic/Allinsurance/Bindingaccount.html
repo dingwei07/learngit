@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+   <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+   <link rel="stylesheet" href="css/Hui.css" />
+   <link rel="stylesheet" href="css/Bindingaccount.css" />
+   <link rel="stylesheet" href="css/need/layer.css" />
+   <title>绑定账号</title>
+</head>
+<body>
+     <div class="BindingcaaountPage">
+     	<div class="headImg">
+     		<img class="Headportrait" src="img/Headportrait.png" />
+     		<p class="userName">三毛</p>
+     	</div>
+    <div class="PhonePwd">
+    		<div class="border_phone">
+	    		<img class="phone" src="img/phone.png" />&nbsp;&nbsp;
+	    		<input id="phone" class="input_P" type="text" maxlength="11" placeholder="手机号码" />
+    	   </div>
+	    	<div class="border_phone">
+	    		<img class="pwd" src="img/pwd.png"/>&nbsp;&nbsp;
+	    		<input id="pwd" class="input_W" type="password" maxlength="16" placeholder="输入密码" />
+	    	</div>
+    </div>
+    <div class="forgetPwd">
+    	 <a href="#" class="a_pwd">忘记密码</a>
+    </div>
+    <div class="bindingBtn">
+    		<button type="button" onclick="login();" class="hui-button hui-button-large" style="margin-top:8px;background: #5B94FB; border:none;outline:none">绑定账号</button>
+    </div>
+     </div>
+</body>
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="js/layer.js"></script>
+<script type="text/javascript">
+	  var Pval=null;
+	  var Wval=null;
+	  function login(){
+	  	Pval=$('#phone').val();
+	  	Wval=$('#pwd').val();
+	  var ptest=/^1[3|4|5|7|8][0-9]{9}$/
+	  if(Pval==null || Pval==''){
+	  	layer.open({
+		    content: '手机号不能为空'
+		    ,btn: '我知道了'
+		  });
+
+	  	return;
+	  }else if(Pval.substr(0,1)!=1){
+	  	layer.open({
+		    content: '手机号不正确',
+		    btn: '我知道了',
+		    yes:function(){
+		    	$('#phone').val('');  
+		    	layer.closeAll();
+		    }
+		  });
+		
+	  	return;
+	  }else if(Pval.length!=11){
+	    layer.open({
+		    content: '手机号长度不够11位',
+		    btn: '我知道了',
+		    yes:function(){
+		    	$('#phone').val('');  
+		    	layer.closeAll();
+		    }
+		  });
+	  	return;
+	  }else if(!ptest.test(Pval)){
+	  	layer.open({
+		    content: '不是完整的11位手机号',
+		    btn: '我知道了',
+		    yes:function(){
+		    	$('#phone').val('');  
+		    	layer.closeAll();
+		    }
+		  });
+	  	return;
+	  }
+	  
+	  var reg=/^(?![^a-zA-Z]+$)(?!\D+$)/
+	  if(Wval == null || Wval==''){
+	  	 layer.open({
+		    content: '密码不能为空',
+		    btn: '我知道了',
+		  });
+	  	 return;
+	  }else if(Wval.length<6){
+	  	layer.open({
+		    content: '请输入6位以上的密码',
+		    btn: '我知道了',
+		    yes:function(){
+		    	$('#pwd').val('');
+		    	layer.closeAll();
+		    }
+		  });
+	  	return;
+	  }else if(!reg.test(Wval)){
+	  	layer.open({
+		    content: '密码需要包含字母和数字',
+		    btn: '我知道了',
+		    yes:function(){
+		    	$('#pwd').val('');
+		    	layer.closeAll();
+		    }
+		  });
+	  	return;
+	  }
+	} 
+</script>
+</html>

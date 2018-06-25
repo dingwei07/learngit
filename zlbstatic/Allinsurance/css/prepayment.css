@@ -1,0 +1,121 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {}
+
+.reimbursement {
+	width: 100%;
+}
+
+.fg {
+	margin: 15px 25px;
+}
+
+.fg_gray {
+	width: 22px;
+	vertical-align: middle;
+	background-image: url(../img/fg_gray.png) no-repeat;
+}
+
+.gray_hui {
+	margin-top:10px;
+}
+
+.fg_blue {
+	width: 22px;
+	margin: 12px 0px;
+	display: none;
+}
+
+.bgWhith {
+	background: #FFFFFF;
+	margin: 0px 15px;
+}
+
+.fgContent {
+	border-bottom: 1px dashed #dcdcdc;
+	display: flex;
+	-webkit-justify-content: space-between;
+	background: #FFFFFF;
+	margin: 0px 10px;
+}
+
+.fgLeft {
+	display: flex;
+	padding: 5px 0px;
+	-webkit-justify-content: flex-end;
+}
+
+.Whichperiod {
+	margin: 0px 10px;
+	color: #333333;
+	font-size: 18px;
+	;
+}
+
+.fgDate {
+	font-size: 14px;
+	color: #555555;
+}
+
+.Alsomoney {
+	margin-top: 15px;
+	color: #fc8d2a;
+	font-size: 18px;
+}
+
+.b_fixed {
+	background: #FFFFFF;
+	bottom: 0px;
+	margin: 20px 15px;
+	padding: 20px 20px;
+}
+
+.amount {
+	text-align: center;
+	font-size: 14px;
+}
+
+.money {
+	text-align: center;
+	color: #fc8d2a;
+	font-size: 25px;
+	margin-top: 6px;
+}
+
+.Clickevent {
+	display: flex;
+}
+
+.fg_btn {
+	flex: 1;
+	padding: 20px 0px;
+}
+
+.determine,
+.consider {
+	font-size: 16px;
+	margin: 0px 4px;
+	padding: 14px 25px;
+	border-radius: 50px;
+}
+
+.determine {
+	background: #6d8cff;
+	float: right;
+	font-size: 16px;
+	color: #FFFFFF;
+}
+
+.consider {
+	color: #6d8cff;
+	float: left;
+	border: 1px solid #6d8cff;
+}
+
+.span_fc8d2a {
+	color: #fc8d2a;
+	margin-top: 15px;
+}

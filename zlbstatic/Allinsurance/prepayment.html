@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html style="background: #ededed;">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>提前还款</title>
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<link rel="stylesheet" href="css/prepayment.css" />
+		<link rel="stylesheet" href="css/Hui.css" />
+		<!--<link rel="stylesheet" href="css/layer.css" />-->
+	</head>
+
+	<body style="background: #ededed;">
+		<div class="reimbursement">
+			<div class="fg">
+				<img class="fg_gray" id="all" src="img/fg_gray.png" />&nbsp;&nbsp;全选
+			</div>
+			<div class="bgWhith">
+				<div class="fgContent" onclick="also_money(this)">
+					<div class="fgLeft">
+						<div class="gray_hui">
+							<img class="fg_gray" state="0" src="img/fg_gray.png" />
+						</div>
+						<p class="Whichperiod">第一期<br>
+							<span class="fgDate">2017-07-27</span>
+						</p>
+					</div>
+					<div class="fgLeft">
+						<span class="span_fc8d2a">￥</span><span class="Alsomoney">2604.56</span>
+					</div>
+				</div>
+			</div>
+			<div class="bgWhith">
+				<div class="fgContent" onclick="also_money(this)">
+					<div class="fgLeft">
+						<div class="gray_hui">
+							<img class="fg_gray" state="0" src="img/fg_gray.png" />
+						</div>
+						<p class="Whichperiod">第一期<br>
+							<span class="fgDate">2017-07-27</span>
+						</p>
+					</div>
+					<div class="fgLeft">
+						<span class="span_fc8d2a">￥</span><span class="Alsomoney">2604.22</span>
+					</div>
+				</div>
+			</div>
+			<div class="bgWhith">
+				<div class="fgContent" onclick="also_money(this)">
+					<div class="fgLeft">
+						<div class="gray_hui">
+							<img class="fg_gray" state="0" src="img/fg_gray.png" />
+						</div>
+						<p class="Whichperiod">第一期<br>
+							<span class="fgDate">2017-07-27</span>
+						</p>
+					</div>
+					<div class="fgLeft">
+						<span class="span_fc8d2a">￥</span><span class="Alsomoney">2604.22</span>
+					</div>
+				</div>
+			</div>
+			<div class="b_fixed">
+				<p class="amount">还款金额</p>
+				<p class="money">
+					<span style="color: #fc8d2a; font-size: 25px;">￥</span> 0.00
+				</p>
+				<div class="Clickevent">
+					<div class="fg_btn ">
+						<span class="determine">确定还款</span>
+					</div>
+					<div class="fg_btn">
+						<span class="consider">考虑一下</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+	<!--<script type="text/javascript" src="js/layer.js"></script>-->
+	<script type="text/javascript">
+		var seethe = true;
+		var total = 0;
+		var Als = document.querySelectorAll('.Alsomoney'); //获取第几期钱的集合
+		$('#all').click(function() {
+			total=0;
+			if(seethe) {
+				$('.fg_gray').attr('src', 'img/fg_blue.png');
+				$('.fg_gray').attr('state', '1');
+				for(var i = 0; i < Als.length; i++) {
+					total += parseFloat(Als[i].innerHTML); //将string类型转换成浮点数类型
+				}
+				seethe = false;
+			} else {
+				$('.fg_gray').attr('src', 'img/fg_gray.png');
+				$('.fg_gray').attr('state', '0');
+				total = 0;
+				seethe = true;
+			}
+			$('.money').html('￥' + total.toFixed(2));
+		})
+
+		function also_money(obj) {
+			var img = obj.getElementsByClassName('fg_gray')[0]//获取一张图片
+			var state = img.getAttribute('state');//获取图片里面所有的state
+			var money = obj.getElementsByClassName('Alsomoney')[0].innerHTML;//获取当前的钱
+			if(parseInt(state)) { //表示选中1=选中 0表示没选中
+				//取消全选
+				$('#all').attr('src', 'img/fg_gray.png');
+				seethe = true;
+
+				img.setAttribute('src', 'img/fg_gray.png'); //变成未选择的图片
+				img.setAttribute('state', '0'); //变成未选择
+				total -= parseFloat(money);
+			} else { //已选择
+
+				img.setAttribute('src', 'img/fg_blue.png'); //变成选中
+				img.setAttribute('state', '1'); //变成选择
+				total += parseFloat(money);
+
+				//判断是不是全部选中
+				var isAll = true; //是否全选
+				var imgs = document.querySelectorAll('.fg_gray'); //获取所有img
+
+				for(var i = 1; i < imgs.length; i++) {
+					if(imgs[i].getAttribute('state') == '0') { //判断有没有state=0的
+						isAll = false;//如果有0就返回假，不代表全选
+						break;
+					}
+				}
+				if(isAll) { //全选
+					$('#all').attr('src', 'img/fg_blue.png');
+					seethe = false;
+				}
+
+			}
+			$('.money').html('￥' + total.toFixed(2));
+		}
+	</script>
+
+</html>

@@ -1,0 +1,17 @@
+*{ margin: 0px; padding:0px; }
+body{}
+.application_login{ width: 100%;}
+.login_content{ padding: 0px 20px;}
+.header_login{ text-align: center;  margin-top: 80px;}
+.appliactionlogin{ width: 50%; background-size: 100%;}
+.title_1{ color: #dddddd; font-size: 14px;}
+.title_2{ color:#cecece; font-size: 14px; margin-top:25px; }
+.correct_img{ 
+	width: 20px; 
+	background:#ffffff; 
+	padding:6px 3px; 
+	border-radius: 2px; 
+	vertical-align: middle;
+}
+.Confirm{ background:#5b94fb !important; }
+.cancel{ background: #cacaca !important;  color: #ff485c !important;}
